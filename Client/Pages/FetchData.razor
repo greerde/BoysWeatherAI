@@ -7,7 +7,7 @@
 
 <PageTitle>Weather</PageTitle>
 
-<h1>Weather forecast</h1>
+<h1>Evan's Weather forecast</h1>
 
 @* <p>This component demonstrates fetching data from the server.</p> *@
 
@@ -62,7 +62,7 @@ else
     *@
     @if (apiResponse != null)
     {    
-        <h3>Daily Data</h3>
+        <h3>Daily Data from Evan</h3>
         <table class="table">
         <thead>
             <tr>
@@ -70,6 +70,7 @@ else
                 <th>Sunrise</th>
                 <th>UV Index</th>
                 <th>Max Temp (F)</th>
+                <th>Sunshine Duration By Evan</th>
             </tr>
         </thead>
 
@@ -80,6 +81,7 @@ else
                 <td> @apiResponse.Daily.Sunrise[i].ToString()</td>
                 <td> @apiResponse.Daily.UvIndexMax[i].ToString()</td>
                 <td> @apiResponse.Daily.Temperature2mMax[i].ToString()</td>
+                <td> @apiResponse.Daily.SunshineDuration[i].ToString()</td>
             </tr>
             
         }
